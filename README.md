@@ -16,3 +16,12 @@ module swap intel/15.0.2.164 intel/17.4.4.196
 For example 
 ftn -g -dynamic ...
 
+3) Using the Intel advisor
+
+## MPI application
+
+With Cray MPI is better to use Intel advisor on one process, we will use the multi-prog feature
+
+The executable is called for example LU.C.16, create a file called config_initial.txt with the following:
+
+
