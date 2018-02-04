@@ -30,7 +30,12 @@ The executable is called for example LU.C.16, we need 16 MPI processes, create a
 
 This means that the Intel advisor will be used on the first rank only, declare the appropriate path and the name of the executable
 
-Execute sbatch submit_initial.sh
+* Execute sbatch submit_initial.sh
+
+On our system there are some errors at the end, but be sure that the execution of the application is finished without issues, then the errors are coming from some libraries on our system not related to the studied application.
+
+* In order to gather information for the flops execute:
+sbatch submit_flops.sh
 
 
 
