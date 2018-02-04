@@ -21,7 +21,7 @@ ftn -g -dynamic ...
 
 With Cray MPI is better to use Intel advisor on one process, we will use the multi-prog feature
 
-The executable is called for example LU.C.16, we need 16 MPI processes, create a file called config_initial.txt with the following:
+The executable is called for example LU.C.16, we need 16 MPI processes, create a file called [config_initial.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_initial.txt) with the following:
 
 ```
 0 advixe-cl -v -collect survey -project-dir=/path_to_project/ -- ./executable
@@ -41,7 +41,7 @@ On our system there are some errors at the end, but be sure that the execution o
 sbatch submit_flops.sh
 ```
 
-where the config_flops.txt is:
+where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_flops.txt) is:
 
 ```
 0 advixe-cl -collect tripcounts -flop -project-dir=/path_to_project/ -- ./lu.C.16
