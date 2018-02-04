@@ -1,2 +1,2 @@
 # roofline
-Instructions on how to build a roofline with intel advisor on Cray-xc40
+Instructions on how to prepare a roofline with Intel advisor 2018 on Cray-xc40
