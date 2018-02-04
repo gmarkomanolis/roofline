@@ -22,6 +22,17 @@ ftn -g -dynamic ...
 
 With Cray MPI is better to use Intel advisor on one process, we will use the multi-prog feature
 
-The executable is called for example LU.C.16, create a file called config_initial.txt with the following:
+The executable is called for example LU.C.16, we need 16 MPI processes, create a file called config_initial.txt with the following:
+
+
+0 advixe-cl -v -collect survey -project-dir=/path/ -- ./executable
+1-15 ./executable
+
+This means that the Intel advisor will be used on the first rank only, declare the appropriate path and the name of the executable
+
+Execute sbatch submit_initial.sh
+
+
+
 
 
