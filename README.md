@@ -1,7 +1,7 @@
 # Roofline model
 Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-xc40
 
-For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory.
+For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
 
 1. We load the appropriate modules (it depends on the system) 
 
@@ -24,7 +24,7 @@ With Cray MPI is better to use Intel advisor on one process, we will use the mul
 The executable is called for example LU.C.16, we need 16 MPI processes, create a file called config_initial.txt with the following:
 
 ```
-0 advixe-cl -v -collect survey -project-dir=/path/ -- ./executable
+0 advixe-cl -v -collect survey -project-dir=/path_to_project/ -- ./executable
 1-15 ./executable
 ```
 
@@ -41,6 +41,17 @@ On our system there are some errors at the end, but be sure that the execution o
 sbatch submit_flops.sh
 ```
 
+where the config_flops.txt is:
 
+```
+0 advixe-cl -collect tripcounts -flop -project-dir=/path_to_project/ -- ./lu.C.16
+1-15 ./lu.C.16
+```
+If everything worked as expected, you have a folder called e000
+
+* Now open the GUI
+```
+advixe-gui /path_to_project/
+```
 
 
