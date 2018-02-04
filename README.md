@@ -3,7 +3,7 @@ Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-
 
 For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory.
 
-## We load the appropriate modules (it depends on the system)
+** We load the appropriate modules (it depends on the system) **
 
 module swap PrgEnv-cray/5.2.82 PrgEnv-intel
 
