@@ -15,11 +15,13 @@ module swap intel/15.0.2.164 intel/17.4.4.196
 For example 
 ftn -g -dynamic ...
 
+All the submission and config files are included in the [roofline](https://github.com/gmarkomanolis/roofline)
+
 3. Using the Intel advisor
 
 ### MPI application
 
-With Cray MPI is better to use Intel advisor on one process, we will use the multi-prog feature
+With Cray MPI is better to use Intel advisor on one process, we will use the [multi-prog](https://slurm.schedmd.com/srun.html) feature
 
 The executable is called for example LU.C.16, we need 16 MPI processes, create a file called [config_initial.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_initial.txt) with the following:
 
@@ -30,13 +32,15 @@ The executable is called for example LU.C.16, we need 16 MPI processes, create a
 
 This means that the Intel advisor will be used on the first rank only, declare the appropriate path and the name of the executable
 
-* Execute 
+* Execute:
+ 
 ```
 sbatch submit_initial.sh
 ```
 On our system there are some errors at the end, but be sure that the execution of the application is finished without issues, then the errors are coming from some libraries on our system not related to the studied application.
 
-* In order to gather information for the flops execute:
+* In order to gather information for the flops, execute:
+
 ```
 sbatch submit_flops.sh
 ```
