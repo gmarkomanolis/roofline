@@ -2,7 +2,7 @@
 
 Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-xc40
 
-For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
+For this test case, I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
 
 1. We load the appropriate modules (it depends on the system) 
 
@@ -38,7 +38,7 @@ This means that the Intel advisor will be used on the first rank only, declare t
 ```
 sbatch submit_initial.sh
 ```
-On our system there are some errors at the end, but be sure that the execution of the application is finished without issues, then the errors are coming from some libraries on our system not related to the studied application.
+On our system, there are some errors at the end, but be sure that the execution of the application is finished without issues, then the errors are coming from some libraries on our system not related to the studied application.
 
 * In order to gather information for the flops, execute:
 
@@ -46,7 +46,7 @@ On our system there are some errors at the end, but be sure that the execution o
 sbatch submit_flops.sh
 ```
 
-where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_flops.txt) is:
+where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_flops.txt) contains this:
 
 ```
 0 advixe-cl -collect tripcounts -flop -project-dir=/path_to_project/ -- ./lu.C.16
@@ -73,7 +73,7 @@ advixe-gui /path_to_project/ &
 
 ### GUI
 
-* This is the initial GUY while you execute the above command
+* This is the initial GUI while you execute the above command
 
 ![alt text](/tutorial/roofline_initial.png)
 
@@ -85,7 +85,7 @@ advixe-gui /path_to_project/ &
 
 ![alt text](/tutorial/survey_roofline.png)
 
-* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the epxeriments and the initial roofline peak results are about full node. 
+* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the experiments and the initial roofline peak results are about full node. The data points represent different loops. The colors and the size of the data points indicate the percentage of the time, larger the circle, it consumes more time. The red color shows that the performance is not efficient. If you click on one of the data points the window below will show the corresponding code.
 
 ![alt text](/tutorial/roofline_model.png)
 
