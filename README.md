@@ -85,7 +85,7 @@ advixe-gui /path_to_project/ &
 
 ![alt text](/tutorial/survey_roofline.png)
 
-* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the experiments and the initial roofline peak results are about full node. The data points represent different loops. The colors and the size of the data points indicate the percentage of the time, larger the circle, it consumes more time. The red color shows that the performance is not efficient. If you click on one of the data points the window below will show the corresponding code.
+* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the experiments and the initial roofline peak results are about full node. The data points represent different loops. The colors and the size of the data points indicate the percentage of the time, larger the circle, it consumes more time. The red color shows that the performance is not efficient. If you click on one of the data points the window below will show the corresponding code. We can see multiple peak lines related to memory bandwidth and operations. Through this approach we can get familiar when part of the code fits to the memory and if the code does not achieve quite good performance.
 
 ![alt text](/tutorial/roofline_model.png)
 
