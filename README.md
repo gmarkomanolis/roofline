@@ -74,17 +74,17 @@ advixe-gui /path_to_project/ &
 
 * If you click on the project e000 then you will see on your right the following data with generic overview of the efficiency
 
-![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/summary.png)
+![alt text](/tutorial/summary.png)
 
 * If you click on the tab "Survey & Roofline" you can see data per loop and identify potential bottlenecks.
 
-![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/survey_roofline.png)
+![alt text](/tutorial/survey_roofline.png)
 
 * If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the epxeriments and the initial roofline peak results are about full node. 
 
-![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/roofline_model.png)
+![alt text](/tutorial/roofline_model.png)
 
 * If you click the tab "Why No Vectorization?" below the roofline model, you can find some tips to improve the code
 
-![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/recommendations.png)
+![alt text](/tutorial/recommendations.png)
 
