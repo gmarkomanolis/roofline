@@ -1,4 +1,5 @@
 # Getting started with Intel Advisor 2018 roofline model
+
 Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-xc40
 
 For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
