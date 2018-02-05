@@ -1,4 +1,4 @@
-# Getting started with Intel Advisor roofline model
+# Getting started with Intel Advisor 2018 roofline model
 Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-xc40
 
 For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
@@ -83,4 +83,8 @@ advixe-gui /path_to_project/ &
 * If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the epxeriments and the initial roofline peak results are about full node. 
 
 ![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/roofline_model.png)
+
+* If you click the tab "Why No Vectorization?" below the roofline model, you can find some tips to improve the code
+
+![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/recommendations.png)
 
