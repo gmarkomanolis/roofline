@@ -70,7 +70,7 @@ advixe-gui /path_to_project/ &
 
 * This is the initial GUY while you execute the above command
 
-![alt text](https://raw.githubusercontent.com/gmarkomanolis/roofline/master/tutorial/roofline_initial.png)
+![alt text](/tutorial/roofline_initial.png)
 
 * If you click on the project e000 then you will see on your right the following data with generic overview of the efficiency
 
