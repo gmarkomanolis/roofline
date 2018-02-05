@@ -63,7 +63,21 @@ where the [config_dependencies.txt](https://github.com/gmarkomanolis/roofline/bl
 
 * Now open the GUI
 ```
-advixe-gui /path_to_project/
+advixe-gui /path_to_project/ &
 ```
 
+### GUI
 
+* This is the initial GUY while you execute the above command
+
+![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/roofline_initial.png)
+
+* If you click on the project e000 then you will see on your right the following data with generic overview of the efficiency
+
+![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/summary.png)
+
+* If you click on the tab "Survey & Roofline" you can see data per loop and identify potential bottlenecks.
+
+![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/survey_roofline.png)
+
+* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below
