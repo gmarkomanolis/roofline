@@ -49,9 +49,8 @@ where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/mast
 ```
 If everything worked as expected, you have a folder called e000
 
-#### Optional
 
-* Use Intel advisor to gather information about data dependencies for the loops that are not vectorized because of data dependencies
+* Optional step, Use Intel advisor to gather information about data dependencies for the loops that are not vectorized because of data dependencies. Be careful this phase take significant time to finish the execution
 ```
 sbatch submit_dependencies.sh
 ```
