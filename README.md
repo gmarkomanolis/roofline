@@ -1,4 +1,4 @@
-# Roofline model
+# Getting started with Intel Advisor roofline model
 Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-xc40
 
 For this test case I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
@@ -48,6 +48,19 @@ where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/mast
 1-15 ./lu.C.16
 ```
 If everything worked as expected, you have a folder called e000
+
+#### Optional
+
+* Use Intel advisor to gather information about data dependencies for the loops that are not vectorized because of data dependencies
+```
+sbatch submit_dependencies.sh
+```
+where the [config_dependencies.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_dependencies.txt) is:
+
+```
+0 advixe-cl -collect dependencies -track-stack-variables -no-filter-reductions -no-filter-by-scope -stop-after=0 -- ./lu.C.16
+1-15 ./lu.C.16
+```
 
 * Now open the GUI
 ```
