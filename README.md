@@ -80,4 +80,7 @@ advixe-gui /path_to_project/ &
 
 ![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/survey_roofline.png)
 
-* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below
+* If you click on the Roofline menu (left arrow on the above screenshot), you get the roofline model below. We select the checkbox that the arrows points as we use only one MPI process for the epxeriments and the initial roofline peak results are about full node. 
+
+![alt text](https://github.com/gmarkomanolis/roofline/blob/master/tutorial/roofline_model.png)
+
