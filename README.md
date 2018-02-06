@@ -51,7 +51,7 @@ Disable system and non interesting modules, for example for a module called demo
 0 advixe-cl -v -collect survey -module-filter-mode=include -module-filter=demo.so -project-dir=/path_to_project/ -- ./executable
 1-15 ./executable
 ```
-[Intel Advisor overhead](https://software.intel.com/en-us/articles/managing-overhead-of-intel-advisor-analyses)
+See: [Intel Advisor overhead](https://software.intel.com/en-us/articles/managing-overhead-of-intel-advisor-analyses)
 
 * Execute:
  
