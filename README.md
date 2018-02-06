@@ -74,6 +74,26 @@ where the [config_flops.txt](https://github.com/gmarkomanolis/roofline/blob/mast
 ```
 If everything worked as expected, you have a folder called e000
 
+If the execution time is too slow, you could disable the tricount or apply some techniques:
+
+Disable tripcount:
+```
+0 advixe-cl -collect -flop -no-trip-counts -project-dir=/path_to_project/ -- ./lu.C.16
+1-15 ./lu.C.16
+```
+
+Select loops to profile:
+```
+0 advixe-cl -collect tripcounts -flop -mark-up-list=<id1> -project-dir=/path_to_project/ -- ./lu.C.16
+1-15 ./lu.C.16
+```
+or
+```
+0 advixe-cl -collect tripcounts -flop -loops=scalar,loop-height=0 -project-dir=/path_to_project/ -- ./lu.C.16
+1-15 ./lu.C.16
+```
+
+
 
 * Optional step, Use Intel advisor to gather information about data dependencies for the loops that are not vectorized because of data dependencies. Be careful this phase take significant time to finish the execution
 ```
