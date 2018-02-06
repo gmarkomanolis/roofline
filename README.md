@@ -4,21 +4,27 @@ Instructions on how to prepare a roofline model with Intel advisor 2018 on Cray-
 
 For this test case, I will use NAS Benchmarks (LU). Moreover, I use Shaheen II supercomputer, a Cray-XC40 at KAUST Supercomputing Laboratory. Adjust the paths and the executable name accordingly.
 
-1. We load the appropriate modules (it depends on the system) 
+1. Connect to the system with X11
+
+```
+ssh -X ...
+```
+
+2. We load the appropriate modules (it depends on the system) 
 
 ```
 module swap PrgEnv-cray/5.2.82 PrgEnv-intel
 module load advisor/2018.1.1.535164 
 module swap intel/15.0.2.164 intel/17.4.4.196
 ```
-2. We need to compile our application with debug mode and dynamic compilation
+3. We need to compile our application with debug mode and dynamic compilation
 
 For example 
 ftn -g -dynamic ...
 
 All the submission and config files are included in the [roofline](https://github.com/gmarkomanolis/roofline)
 
-3. Using the Intel advisor
+4. Using the Intel advisor
 
 ### MPI application
 
