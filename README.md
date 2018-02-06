@@ -30,14 +30,28 @@ All the submission and config files are included in the [roofline](https://githu
 
 With Cray MPI is better to use Intel advisor on one process, we will use the [multi-prog](https://slurm.schedmd.com/srun.html) feature
 
-The executable is called for example LU.C.16, we need 16 MPI processes, create a file called [config_initial.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_initial.txt) with the following:
+* The executable is called for example LU.C.16, we need 16 MPI processes, create a file called [config_initial.txt](https://github.com/gmarkomanolis/roofline/blob/master/config_initial.txt) with the following:
 
 ```
 0 advixe-cl -v -collect survey -project-dir=/path_to_project/ -- ./executable
 1-15 ./executable
 ```
-
 This means that the Intel advisor will be used on the first rank only, declare the appropriate path and the name of the executable
+
+ * If the execution is too slow then follow some advices:
+
+Change default program tree processing mode (especially for Fortran code):
+```
+0 advixe-cl -v -collect survey –stackwalk-mode=online –no-stack-stitching -project-dir=/path_to_project/ -- ./executable
+1-15 ./executable
+```
+
+Disable system and non interesting modules, for example for a module called demo.so:
+```
+0 advixe-cl -v -collect survey -module-filter-mode=include -module-filter=demo.so -project-dir=/path_to_project/ -- ./executable
+1-15 ./executable
+```
+[Intel Advisor overhead](https://software.intel.com/en-us/articles/managing-overhead-of-intel-advisor-analyses)
 
 * Execute:
  
